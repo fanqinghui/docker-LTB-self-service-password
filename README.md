@@ -31,14 +31,14 @@ $keyphrase = "goodluck";
 ### build
 
 ```
-docker build -t="xiandaicaixian/ltb-self-service-password" .
+docker build -t="youname/ltb-self-service-password" .
 ```
 
 
 ### 运行
 
 ```
-docker run -d --restart=always --name=ldap-ssp  -p 8765:80 xiandaicaixian/ltb-self-service-password
+docker run -d --restart=always --name=ldap-ssp  -p 8765:80 youname/ltb-self-service-password
 # 查看日志
  docker exec -ti $(docker ps | grep 'ltb-self-service-password' | awk '{print $1}') tail /var/log/apache2/error.log
 ```
