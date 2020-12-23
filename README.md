@@ -1,6 +1,7 @@
 # 项目说明
 
-本镜像是现代财险内部自主更改LDAP用户代码的镜像构建工程
+本项目用于自助更改LDAP用户密码，是基于docker-LTB-self-service-password镜像更改而来，适用于国内网络环境的构建源码
+
 配置文件存放于 assets/config.inc.php中
 
 ## LDAP配置
