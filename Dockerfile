@@ -4,6 +4,9 @@ CMD ["/sbin/my_init"]
 
 ENV DEBIAN_FRONTEND noninteractive
 
+#modify apt-source
+ADD sources.list /etc/apt/
+
 # Install Apache2, PHP and LTB ssp
 RUN apt-get update && apt-get install -y apache2 php5 php5-mcrypt php5-ldap && apt-get clean
 RUN curl -L https://ltb-project.org/archives/self-service-password_1.3-1_all.deb > self-service-password.deb && dpkg -i self-service-password.deb ; rm -f self-service-password.deb
